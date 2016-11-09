@@ -1,0 +1,23 @@
+{
+  "name": "toolkit",
+  "version": "1.0.0",
+  "description": "Toolkit Universaldata",
+  "main": "index.js",
+  "scripts": {
+    "test": "./grunt test"
+  },
+  "keywords": [
+    "toolkit",
+    "css",
+    "scss",
+    "javasrcipt",
+    "webdesign"
+  ],
+  "author": "Eduardo Sant'Anna Martins",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
