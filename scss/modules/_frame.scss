@@ -1,0 +1,45 @@
+@import "base";
+
+$frame-bg-color: $white;
+$frame-bg-fade: 25%;
+
+@mixin generate-frame($bg-color) {
+  padding: 2%;
+  background-color: $bg-color;
+  border-radius: 10px;
+  margin: 10px 5px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.frame {
+  @include generate-frame($frame-bg-color);
+
+  &.primary {
+    background-color: lighten($primary-color, $frame-bg-fade);
+  }
+
+  &.secondary {
+    background-color: lighten($secondary-color, $frame-bg-fade);
+  }
+
+  &.alert {
+    background-color: lighten($alert-color, $frame-bg-fade);
+  }
+
+  &.success {
+    background-color: lighten($success-color, $frame-bg-fade);
+  }
+
+  &.warning {
+    background-color: lighten($warning-color, $frame-bg-fade);
+  }
+
+  &.info {
+    background-color: lighten($info-color, $frame-bg-fade);
+  }
+
+}

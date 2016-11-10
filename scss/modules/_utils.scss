@@ -1,0 +1,24 @@
+$TYPES: measure, list, bool, string, color, number, unit;
+$UNITS: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
+
+@function is_measure($var) {
+  @if type-of($var) == number {
+    @if unitless($var) {
+      @return false;
+    }
+  } @else {
+    @return false;
+  }
+  @if not index($UNITS, unit($var)) {
+    @return false;
+  } @else {
+    @return true;
+  }
+}
+
+@function scale($num, $percent) {
+  @if is_measure($num) and unit($percent) == '%' {
+    @return $num * (1 + $percent/100%);
+  }
+  @error "A mensure type and % type required"
+}
