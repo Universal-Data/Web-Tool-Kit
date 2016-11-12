@@ -6,8 +6,9 @@ $frame-bg-fade: 25%;
 @mixin generate-frame($bg-color) {
   padding: 2%;
   background-color: $bg-color;
-  border-radius: 10px;
-  margin: 10px 5px;
+  border:  0.07143rem solid darken($bg-color, 5%);
+  border-radius: 0.7143rem;
+  margin: 0.7143rem  0.3571rem;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -ms-flex: 1;
@@ -41,5 +42,10 @@ $frame-bg-fade: 25%;
   &.info {
     background-color: lighten($info-color, $frame-bg-fade);
   }
-
+  code, pre{
+    padding: 1.5%;
+    margin: 0;
+    color: $white;
+    background-color: $secondary-color;
+  }
 }
