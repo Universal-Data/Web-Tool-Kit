@@ -1,47 +1,131 @@
 @import "base";
 @import "utils";
 
+$button-colors: (
+        'secondary': $secondary-color,
+        'alert': $alert-color,
+        'warning': $warning-color,
+        'success': $success-color,
+        'info': $info-color,
+);
+
 $button-font-size: 0.9rem;
 $button-padding-top-bottom: 0.7rem;
 $button-padding-right-left: 2.5rem;
+$button-border-radius: 0.2857rem;
+$button-margin: 0 0 1rem 0;
 $button-light-color: $white;
 $button-dark-color: $black;
 
-@mixin generate-button($bg-color) {
+$button-icon-fill-color: $white;
+$button-icon-width: 3.714rem;
+$button-icon-height: 3.714rem;
+$button-icon-padding: 0.3571rem;
+$button-icon-margin: 0.3571rem 0.1429rem 1rem 0.1429rem;
 
-  text-decoration: none;
-  display: inline-block;
-  color: $button-light-color;
-  padding: $button-padding-top-bottom $button-padding-right-left;
+@mixin base-button-icon($width:$button-icon-width, $height:$button-icon-height, $margin:$button-icon-margin,
+$padding: $button-icon-padding) {
+  z-index: 9;
+  position: relative;
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: 0.3571rem;
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, .13);
+  -webkit-transition: fill .25s ease-in-out, transform .25s ease-in-out;
+  -o-transition: fill .25s ease-in-out, transform .25s ease-in-out;
+  transition: fill .25s ease-in-out, transform .25s ease-in-out;
+
+  svg {
+    display: block;
+    height: 1.571rem;
+    width: 100%
+  }
+
+}
+
+@mixin generate-button-icon($bg-color, $border-radius:50%) {
+  fill: $button-icon-fill-color;
+  border-radius: $border-radius;
   background-color: $bg-color;
-  text-align: center;
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1)
+  }
+
+}
+
+@mixin base-button($font-size:$button-font-size, $border-radius:$button-border-radius, $margin:$button-margin) {
   line-height: 1;
   cursor: pointer;
-  -webkit-appearance: none;
-  -webkit-transition: color, background-color 0.25s ease-out, color 0.25s ease-out;
-  transition: color, background-color 0.25s ease-out, color 0.25s ease-out;
+  text-align: center;
+  margin: $margin;
+  font-size: $font-size;
+  border-radius: $border-radius;
+  text-decoration: none;
+  display: inline-block;
   vertical-align: middle;
-  border: 1px solid darken($bg-color, 1%);
-  border-radius: 4px;
-  margin: 0 0 1rem 0;
-  font-size: 0.9rem;
+  -webkit-appearance: none;
+  color: $button-light-color;
+  padding: $button-padding-top-bottom $button-padding-right-left;
+  -webkit-transition: color, background-color 0.25s ease-out, color 0.25s ease-out, box-shadow 200ms ease-out;
+  transition: color, background-color 0.25s ease-out, color 0.25s ease-out, box-shadow 200ms ease-out;
+}
 
+@mixin generate-button($bg-color, $classes:()) {
+
+  background-color: $bg-color;
+  border: 1px solid darken($bg-color, 1%);
+
+  &:hover {
+    background-color: darken($bg-color, 5%);
+    box-shadow: 0 0.07143rem 0.3571rem rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    box-shadow: 0 0.07143rem 0.2143rem rgba(0, 0, 0, 0.2) inset;
+  }
+}
+
+@mixin generate-button-raw($bg-color) {
   &.raw {
     background-color: transparent;
     border: 1px solid $bg-color;
     color: $bg-color;
 
     &:hover {
+      box-shadow: none;
       background-color: transparent;
       border: 1px solid darken($bg-color, 20%);
       color: darken($bg-color, 20%);
     }
   }
+}
 
-  // TODO: FIX BREAK LAYOUT
+.button {
+  @include base-button();
+
+  @include generate-button($primary-color);
+  @include generate-button-raw($primary-color);
+
+
+  @if type_of($button-colors) == 'map' {
+    @each $class, $bg-color in $button-colors {
+      &.#{$class} {
+        @include generate-button($bg-color);
+        @include generate-button-raw($bg-color);
+      }
+    }
+  } @else {
+    @error "Should be a map element";
+  }
+
   &.expand {
     display: block;
-    width: 100%;
+    max-width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -50,86 +134,37 @@ $button-dark-color: $black;
     border-radius: 0;
   }
 
-  &:hover {
-    background-color: darken($bg-color, 5%);
-  }
-
   &.micro {
-    font-size: scale($button-font-size, -40%);
-    padding: scale($button-padding-top-bottom, -40%) scale($button-padding-right-left, -40%);
+    font-size: scale-function($button-font-size, -40%);
+    padding: scale-function($button-padding-top-bottom, -40%) scale-function($button-padding-right-left, -40%);
   }
+
   &.small {
-    font-size: scale($button-font-size, -20%);
-    padding: scale($button-padding-top-bottom, -20%) scale($button-padding-right-left, -20%);
+    font-size: scale-function($button-font-size, -20%);
+    padding: scale-function($button-padding-top-bottom, -20%) scale-function($button-padding-right-left, -20%);
   }
+
   &.large {
-    font-size: scale($button-font-size, 20%);
-    padding: scale($button-padding-top-bottom, 20%) scale($button-padding-right-left, 20%);
+    font-size: scale-function($button-font-size, 20%);
+    padding: scale-function($button-padding-top-bottom, 20%) scale-function($button-padding-right-left, 20%);
   }
 
-  &.circle {
-    position: relative;
-    padding: 22px;
-    margin: 4px;
-    height: 0;
-    width: 0;
-    display: block;
-    border-radius: 50%;
-    font-size: 0;
+  &.icon {
+    @include base-button-icon();
+    @include generate-button-icon($primary-color);
 
-    span {
-      position: absolute;
-      line-height: 0;
-      top: 50%;
-      width: 100%;
-      left: 0;
-      text-align: center;
-      color: #fff;
+    &.square {
+      border-radius: 10%;
     }
-  }
 
-  &.square {
-    position: relative;
-    padding: 22px;
-    margin: 4px;
-    height: 0;
-    width: 0;
-    display: block;
-    border-radius: 10%;
-    font-size: 0;
+    @each $class, $colors in $button-colors{
+      &.#{$class}{
+        @include generate-button-icon($colors);
 
-    span {
-      position: absolute;
-      line-height: 0;
-      top: 50%;
-      width: 100%;
-      left: 0;
-      text-align: center;
-      color: #fff;
+        &.square {
+          border-radius: 10%;
+        }
+      }
     }
-  }
-}
-
-.button {
-  @include generate-button($primary-color);
-
-  &.secondary {
-    @include generate-button($secondary-color);
-  }
-
-  &.alert {
-    @include generate-button($alert-color);
-  }
-
-  &.warning {
-    @include generate-button($warning-color);
-  }
-
-  &.success {
-    @include generate-button($success-color);
-  }
-
-  &.info{
-    @include generate-button($info-color);
   }
 }
