@@ -1,0 +1,41 @@
+$grids: 12;
+
+
+@mixin factory-grid-columns($class, $columns:$grids){
+  @if type_of($columns) == 'number' {
+    @if $columns > 5 and $columns <= 20 {
+      @for $i from 1 through $columns {
+        .#{$class}-#{$i} {
+          width: (($i* 100)/$columns) * 1%;
+        }
+      }
+    }
+    @else {
+      @error 'Columns must be between 5 and 20'
+    }
+    [class*="#{$class}-"] {
+      display: inline-block;
+      float: left;
+    }
+  }
+
+}
+
+.row {
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  @include factory-grid-columns(cols, $grids);
+
+  @media screen and (max-width: 532px) {
+    @include factory-grid-columns(small, $grids);
+  }
+  @media screen and (min-width: 533px) and (max-width: 763px){
+    @include factory-grid-columns(medium, $grids);
+  }
+  @media screen and (min-width: 764px) {
+    @include factory-grid-columns(large, $grids);
+  }
+}
