@@ -1,10 +1,10 @@
 // Default colors
 $white: #FFFFFF;
+$gray: #606060;
 $black: #000000;
 $light-gray: #F1F1F1;
 
 // Colors of the system
-//$primary-color:   #02A4D3;
 $primary-color:   #0048BA;
 $secondary-color: #5F8A8B;
 $alert-color:     #CA3435;
@@ -12,10 +12,13 @@ $success-color:   #1AB385;
 $warning-color:   #FFD12A;
 $info-color:      #FF681F;
 
+
+$background-color: $light-gray;
+
 * {
-  font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: $light-gray;
+  background-color: $background-color;
 }

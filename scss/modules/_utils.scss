@@ -16,9 +16,21 @@ $UNITS: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 
   }
 }
 
-@function scale($num, $percent) {
+@function scale-function($num, $percent) {
   @if is_measure($num) and unit($percent) == '%' {
     @return $num * (1 + $percent/100%);
   }
   @error "A mensure type and % type required"
+}
+
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)); //w3c definition of color brightness
+}
+
+@function dark-light-diff($adjusted-color, $comparison-color, $lightness, $darkness) {
+  @if brightness($adjusted-color) < brightness($comparison-color) {
+    @return scale-color($adjusted-color, $lightness: $lightness)
+  } @else {
+    @return scale-color($adjusted-color, $lightness: $darkness)
+  }
 }
