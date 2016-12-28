@@ -1,0 +1,76 @@
+@import "default";
+
+.hide {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (min-width: $small-screen-min-width) and (max-width: $small-screen-max-width) {
+    &.small {
+      display: none;
+      visibility: hidden;
+    }
+    &.medium, &.large {
+      display: inherit;
+      visibility: inherit;
+    }
+  }
+
+  @media screen and (min-width: $medium-screen-min-width) and (max-width: $medium-screen-max-width) {
+    &.medium {
+      display: none;
+      visibility: hidden;
+    }
+    &.small, &.large {
+      display: inherit;
+      visibility: inherit;
+    }
+  }
+
+  @media screen and (min-width: $large-screen-min-width) and (max-width: $large-screen-max-width) {
+    &.large {
+      display: none;
+      visibility: hidden;
+    }
+    &.small, &.medium {
+      display: inherit;
+      visibility: inherit;
+    }
+  }
+}
+
+.show {
+  display: inherit;
+  visibility: inherit;
+  @media screen and (min-width: $small-screen-min-width) and (max-width: $small-screen-max-width) {
+    &.small {
+      display: inherit;
+      visibility: inherit;
+    }
+    &.medium, &.large {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  @media screen and (min-width: $medium-screen-min-width) and (max-width: $medium-screen-max-width) {
+    &.medium {
+      display: inherit;
+      visibility: inherit;
+    }
+    &.small, &.large {
+      display: none;
+      visibility: hidden;
+
+    }
+  }
+  @media screen and (min-width: $large-screen-min-width) and (max-width: $large-screen-max-width) {
+    &.large {
+      display: inherit;
+      visibility: inherit;
+    }
+    &.small, &.medium {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+

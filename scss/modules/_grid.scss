@@ -1,7 +1,6 @@
-$grids: 12;
+@import "default";
 
-
-@mixin factory-grid-columns($class, $columns:$grids){
+@mixin factory-grid-columns($class, $columns:$columns){
   @if type_of($columns) == 'number' {
     @if $columns > 5 and $columns <= 20 {
       @for $i from 1 through $columns {
@@ -13,7 +12,7 @@ $grids: 12;
     @else {
       @error 'Columns must be between 5 and 20'
     }
-    [class*="#{$class}-"] {
+    [class*="#{$class}"] {
       display: inline-block;
       float: left;
     }
@@ -27,15 +26,29 @@ $grids: 12;
     clear: both;
     display: block;
   }
-  @include factory-grid-columns(cols, $grids);
+  @include factory-grid-columns(cols);
 
-  @media screen and (max-width: 532px) {
-    @include factory-grid-columns(small, $grids);
+  &.centered > div{
+    float: none;
+    clear: both;
+    margin: 0 auto;
+    overflow: hidden;
+    display: block;
   }
-  @media screen and (min-width: 533px) and (max-width: 763px){
-    @include factory-grid-columns(medium, $grids);
+
+  &.right > div{
+    float: right;
   }
-  @media screen and (min-width: 764px) {
-    @include factory-grid-columns(large, $grids);
+
+
+  @media screen and (min-width: $small-screen-min-width) and (max-width: $small-screen-max-width) {
+    @include factory-grid-columns(small);
   }
+  @media screen and (min-width: $medium-screen-min-width) and (max-width: $medium-screen-max-width){
+    @include factory-grid-columns(medium);
+  }
+  @media screen and (min-width: $large-screen-min-width) and (max-width: $large-screen-max-width) {
+    @include factory-grid-columns(large);
+  }
+
 }

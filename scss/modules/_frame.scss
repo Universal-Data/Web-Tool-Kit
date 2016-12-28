@@ -1,7 +1,4 @@
-@import "base";
-
-$frame-bg-color: $white;
-$frame-bg-fade: 25%;
+@import "default";
 
 @mixin generate-frame($bg-color) {
   padding: 2%;
@@ -23,29 +20,16 @@ $frame-bg-fade: 25%;
     background-color: lighten($primary-color, $frame-bg-fade);
   }
 
-  &.secondary {
-    background-color: lighten($secondary-color, $frame-bg-fade);
+  @each $class, $bg-color in $button-colors {
+    &.#{$class} {
+      background-color: lighten($bg-color, $frame-bg-fade);
+    }
   }
 
-  &.alert {
-    background-color: lighten($alert-color, $frame-bg-fade);
-  }
-
-  &.success {
-    background-color: lighten($success-color, $frame-bg-fade);
-  }
-
-  &.warning {
-    background-color: lighten($warning-color, $frame-bg-fade);
-  }
-
-  &.info {
-    background-color: lighten($info-color, $frame-bg-fade);
-  }
   code, pre{
     padding: 1.5%;
     margin: 0;
     color: $white;
-    background-color: $secondary-color;
+    background-color: $frame-code-bg-color;
   }
 }

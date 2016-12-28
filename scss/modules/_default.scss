@@ -1,0 +1,69 @@
+// Default colors
+$white: #FFFFFF;
+$gray: #606060;
+$lead: #333333;
+$black: #000000;
+$light-gray: #F1F1F1;
+
+// Colors of the system
+$primary-color:   #0048BA;
+$secondary-color: #5F8A8B;
+$error-color:     #CA3435;
+$success-color:   #1AB385;
+$warning-color:   #FFD12A;
+$info-color:      #FF681F;
+
+$background-color: $light-gray;
+
+// Grid System
+$columns: 12;
+
+$small-screen-min-width: 1px;
+$small-screen-max-width: 432px;
+
+$medium-screen-min-width: 433px;
+$medium-screen-max-width: 732px;
+
+$large-screen-min-width: 733px;
+$large-screen-max-width: 10000px;
+
+// Frames
+
+$frame-bg-color: $white;
+$frame-bg-fade: 25%;
+$frame-code-bg-color: $secondary-color;
+
+// Typography
+
+$font-family: 'Nunito', Helvetica, Arial, sans-serif;
+$font-family-monospace: 'Droid Sans Mono', monospace;
+$text-darken-percent: 15%;
+
+// Button
+
+$button-colors: (
+        'secondary': $secondary-color,
+        'error': $error-color,
+        'warning': $warning-color,
+        'success': $success-color,
+        'info': $info-color,
+);
+
+
+$button-font-size: 0.9rem;
+$button-padding-top-bottom: 0.7rem;
+$button-padding-right-left: 2.5rem;
+$button-border-radius: 0.2857rem;
+$button-margin: 0 0 1rem 0;
+$button-light-color: $white;
+$button-dark-color: $black;
+
+$button-icon-fill-color: $white;
+$button-icon-width: 3.714rem;
+$button-icon-height: 3.714rem;
+$button-icon-padding: 0.3571rem;
+$button-icon-margin: 0.3571rem 0.1429rem 1rem 0.1429rem;
+
+
+// Forms
+$bg-color-slider: $lead;

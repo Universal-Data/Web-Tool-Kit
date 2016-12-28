@@ -1,19 +1,4 @@
-// Default colors
-$white: #FFFFFF;
-$gray: #606060;
-$black: #000000;
-$light-gray: #F1F1F1;
-
-// Colors of the system
-$primary-color:   #0048BA;
-$secondary-color: #5F8A8B;
-$alert-color:     #CA3435;
-$success-color:   #1AB385;
-$warning-color:   #FFD12A;
-$info-color:      #FF681F;
-
-
-$background-color: $light-gray;
+@import "default";
 
 * {
     box-sizing: border-box;
@@ -22,3 +7,7 @@ $background-color: $light-gray;
 body {
   background-color: $background-color;
 }
+
+
+
+@import "../settings";

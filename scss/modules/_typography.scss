@@ -1,10 +1,6 @@
-@import "base";
-
-$font-family: 'Nunito', Helvetica, Arial, sans-serif;
-$font-family-monospace: 'Droid Sans Mono', monospace;
+@import "default";
 
 * {
-
   &::selection {
     background: lighten($primary-color, 10%); /* WebKit/Blink Browsers */
   }
@@ -15,7 +11,10 @@ $font-family-monospace: 'Droid Sans Mono', monospace;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 1.2rem 0 1.6rem 0;
   font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
 
   &.sub {
     color: $gray;
@@ -29,6 +28,11 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     border-bottom: 1px solid $black;
   }
+
+  &.bolder{
+    text-shadow: 0 1px $light-gray;
+    font-weight: bolder;
+  }
 }
 
 a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote, button, cite, datalist, dt, dd, dl, del, ins, details,
@@ -41,29 +45,24 @@ table, tbody, td, textarea, tfoot, th, thead, time, title, tr, u, ul, var, video
 }
 
 .text {
+  font-family: $font-family;
 
   &.primary {
     color: darken($primary-color, 15%);
   }
 
-  &.secondary{
-    color: darken($secondary-color, 15%);
+  @each $class, $bg-color in $button-colors {
+    &.#{$class} {
+      color: darken($bg-color, $text-darken-percent);
+    }
   }
 
-  &.success{
-    color: darken($success-color, 15%)
+  &.bold{
+    font-weight: bold;
   }
 
-  &.alert{
-    color: darken($alert-color, 15%);
-  }
-
-  &.warning {
-    color: darken($warning-color, 15%)
-  }
-
-  &.info {
-    color: darken($info-color, 15%)
+  &.light {
+    font-weight: lighter;
   }
 
   &.centered {

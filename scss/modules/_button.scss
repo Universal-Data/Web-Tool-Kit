@@ -1,27 +1,6 @@
-@import "base";
+@import "default";
 @import "utils";
 
-$button-colors: (
-        'secondary': $secondary-color,
-        'alert': $alert-color,
-        'warning': $warning-color,
-        'success': $success-color,
-        'info': $info-color,
-);
-
-$button-font-size: 0.9rem;
-$button-padding-top-bottom: 0.7rem;
-$button-padding-right-left: 2.5rem;
-$button-border-radius: 0.2857rem;
-$button-margin: 0 0 1rem 0;
-$button-light-color: $white;
-$button-dark-color: $black;
-
-$button-icon-fill-color: $white;
-$button-icon-width: 3.714rem;
-$button-icon-height: 3.714rem;
-$button-icon-padding: 0.3571rem;
-$button-icon-margin: 0.3571rem 0.1429rem 1rem 0.1429rem;
 
 @mixin base-button-icon($width:$button-icon-width, $height:$button-icon-height, $margin:$button-icon-margin,
 $padding: $button-icon-padding) {
