@@ -2,10 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index Universal Data toolkit</title>
+    <title>Universal Data toolkit</title>
     <link rel="stylesheet" type="text/css" href="min/app.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        .docs-grid {
+            border-radius: 6px;
+            background-color: grey;
+            border: 1px solid white;
+        }
+
+        .docs-grid > p {
+            color: white;
+            text-align: center;
+            padding: 4px;
+        }
+    </style>
+    <script src="js/universaldata.core.js"></script>
+    <script src="js/universaldata.grid.js"></script>
+    <script>
+        UniversalData.init();
+    </script>
+
 </head>
 <body>
 <div class="frame">
@@ -15,79 +35,84 @@
     <a class="button" href="#"> Button </a>
     <a class="button secondary" href="#"> Button Secondary </a>
     <a class="button success" href="#"> Button Success </a>
-    <a class="button alert" href="#"> Button Alert </a>
+    <a class="button error" href="#"> Button Error </a>
     <a class="button warning" href="#"> Button Warning </a>
     <a class="button info" href="#"> Button Info </a>
-    <br>
+
     <h3> Default flat buttons </h3>
     <a class="button flat" href="#"> Button </a>
     <a class="button secondary flat" href="#"> Button Secondary </a>
     <a class="button success flat" href="#"> Button Success </a>
-    <a class="button alert flat" href="#"> Button Alert </a>
+    <a class="button error flat" href="#"> Button Error </a>
     <a class="button warning flat" href="#"> Button Warning </a>
     <a class="button info flat" href="#"> Button Info </a>
-    <br>
+
     <h3> Default raw buttons </h3>
     <a class="button raw" href="#"> Button </a>
     <a class="button secondary raw" href="#"> Button Secondary </a>
     <a class="button success raw" href="#"> Button Success </a>
-    <a class="button alert raw" href="#"> Button Alert </a>
+    <a class="button error raw" href="#"> Button Error </a>
     <a class="button warning raw" href="#"> Button Warning </a>
     <a class="button info raw" href="#"> Button Info </a>
-    <br>
-    <h3> Sizes buttons</h3>
-    <a class="button micro" href="#"> Button Micro </a>
-    <a class="button small" href="#"> Button Small </a>
-    <a class="button large" href="#"> Button Large </a>
-    <br>
-    <a class="button micro secondary" href="#"> Button Micro </a>
-    <a class="button small secondary" href="#"> Button Small </a>
-    <a class="button large secondary" href="#"> Button Large </a>
-    <br>
-    <a class="button micro success" href="#"> Button Micro </a>
-    <a class="button small success" href="#"> Button Small </a>
-    <a class="button large success" href="#"> Button Large </a>
-    <br>
-    <a class="button micro alert" href="#"> Button Micro </a>
-    <a class="button small alert" href="#"> Button Small </a>
-    <a class="button large alert" href="#"> Button Large </a>
-    <br>
-    <a class="button micro warning" href="#"> Button Micro </a>
-    <a class="button small warning" href="#"> Button Small </a>
-    <a class="button large warning" href="#"> Button Large </a>
-    <br>
-    <a class="button micro info" href="#"> Button Micro </a>
-    <a class="button small info" href="#"> Button Small </a>
-    <a class="button large info" href="#"> Button Large </a>
-    <br>
+
     <h3> Expanded buttons </h3>
     <a class="button expand" href="#"> Button Expand </a>
     <a class="button expand secondary" href="#"> Button Expand </a>
     <a class="button expand success" href="#"> Button Expand </a>
-    <a class="button expand alert" href="#"> Button Expand </a>
+    <a class="button expand error" href="#"> Button Expand </a>
     <a class="button expand warning" href="#"> Button Expand </a>
     <a class="button expand info" href="#"> Button Expand </a>
-    <br>
-    <h3> Icon buttons </h3>
-    <a class="button icon" href="#"></a>
-    <a class="button icon secondary" href="#"></a>
-    <a class="button icon success" href="#"></a>
-    <a class="button icon alert" href="#"></a>
-    <a class="button icon warning" href="#"></a>
-    <a class="button icon info" href="#"></a>
-    <br>
-    <h3> Icon buttons square </h3>
-    <a class="button icon square" href="#"></a>
-    <a class="button icon secondary square" href="#"></a>
-    <a class="button icon success square" href="#"></a>
-    <a class="button icon alert square" href="#"></a>
-    <a class="button icon warning square" href="#"></a>
-    <a class="button icon info square" href="#"></a>
-    <br>
+    <div class="row">
+        <div class="cols-6">
+            <h3> Sizes buttons</h3>
+            <a class="button micro" href="#"> Button Micro </a>
+            <a class="button small" href="#"> Button Small </a>
+            <a class="button large" href="#"> Button Large </a>
+            <br>
+            <a class="button micro secondary" href="#"> Button Micro </a>
+            <a class="button small secondary" href="#"> Button Small </a>
+            <a class="button large secondary" href="#"> Button Large </a>
+            <br>
+            <a class="button micro success" href="#"> Button Micro </a>
+            <a class="button small success" href="#"> Button Small </a>
+            <a class="button large success" href="#"> Button Large </a>
+            <br>
+            <a class="button micro error" href="#"> Button Micro </a>
+            <a class="button small error" href="#"> Button Small </a>
+            <a class="button large error" href="#"> Button Large </a>
+            <br>
+            <a class="button micro warning" href="#"> Button Micro </a>
+            <a class="button small warning" href="#"> Button Small </a>
+            <a class="button large warning" href="#"> Button Large </a>
+            <br>
+            <a class="button micro info" href="#"> Button Micro </a>
+            <a class="button small info" href="#"> Button Small </a>
+            <a class="button large info" href="#"> Button Large </a>
+
+        </div>
+        <div class="cols-3">
+            <h3> Icon buttons </h3>
+            <a class="button icon" href="#"></a>
+            <a class="button icon secondary" href="#"></a>
+            <a class="button icon success" href="#"></a>
+            <a class="button icon error" href="#"></a>
+            <a class="button icon warning" href="#"></a>
+            <a class="button icon info" href="#"></a>
+        </div>
+        <div class="cols-3">
+            <h3> Icon buttons square </h3>
+            <a class="button icon square" href="#"></a>
+            <a class="button icon secondary square" href="#"></a>
+            <a class="button icon success square" href="#"></a>
+            <a class="button icon error square" href="#"></a>
+            <a class="button icon warning square" href="#"></a>
+            <a class="button icon info square" href="#"></a>
+        </div>
+    </div>
     <h2 class="sub header"> Text </h2>
     <h3> Titles </h3>
     <div class="row">
-        <div class="small-12 medium-2 large-4">
+        <div class="small-12 medium-3 large-3">
             <h1> Default Titulo H1 </h1>
             <h2> Default Titulo H2 </h2>
             <h3> Default Titulo H3 </h3>
@@ -95,7 +120,7 @@
             <h5> Default Titulo H5 </h5>
             <h6> Default Titulo H6 </h6>
         </div>
-        <div class="small-12 medium-2 large-4">
+        <div class="small-12 medium-3 large-3">
             <h1 class="sub"> Sub Titulo H1 </h1>
             <h2 class="sub"> Sub Titulo H2 </h2>
             <h3 class="sub"> Sub Titulo H3 </h3>
@@ -103,7 +128,15 @@
             <h5 class="sub"> Sub Titulo H5 </h5>
             <h6 class="sub"> Sub Titulo H6 </h6>
         </div>
-        <div class="small-12 medium-2 large-4">
+        <div class="small-12 medium-3 large-3">
+            <h1 class="bolder"> Bolder Titulo H1 </h1>
+            <h2 class="bolder"> Bolder Titulo H2 </h2>
+            <h3 class="bolder"> Bolder Titulo H3 </h3>
+            <h4 class="bolder"> Bolder Titulo H4 </h4>
+            <h5 class="bolder"> Bolder Titulo H5 </h5>
+            <h6 class="bolder"> Bolder Titulo H6 </h6>
+        </div>
+        <div class="small-12 medium-3 large-3">
             <h1 class="header"> Header Titulo H1 </h1>
             <h2 class="header"> Header Titulo H2 </h2>
             <h3 class="header"> Header Titulo H3 </h3>
@@ -112,14 +145,33 @@
             <h6 class="sub header"> Sub Header Titulo H6 </h6>
         </div>
     </div>
-    <br>
     <h3> Text Colors </h3>
-    <p class="text primary"> The quick brown fox jumps over the lazy dog </p>
-    <p class="text secondary"> The quick brown fox jumps over the lazy dog </p>
-    <p class="text success"> The quick brown fox jumps over the lazy dog </p>
-    <p class="text alert"> The quick brown fox jumps over the lazy dog </p>
-    <p class="text warning"> The quick brown fox jumps over the lazy dog </p>
-    <p class="text info"> The quick brown fox jumps over the lazy dog </p>
+    <div class="row">
+        <div class="cols-4">
+            <p class="text primary"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text secondary"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text success"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text error"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text warning"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text info"> The quick brown fox jumps over the lazy dog </p>
+        </div>
+        <div class="cols-4">
+            <p class="text primary light"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text secondary light"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text success light"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text error light"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text warning light"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text info light"> The quick brown fox jumps over the lazy dog </p>
+        </div>
+        <div class="cols-4">
+            <p class="text primary bold"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text secondary bold"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text success bold"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text error bold"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text warning bold"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text info bold"> The quick brown fox jumps over the lazy dog </p>
+        </div>
+    </div>
     <div class="row">
         <div class="small-12 medium-4 large-4">
             <h4> Center </h4>
@@ -215,8 +267,8 @@
             lacus, id posuere ante. </p>
 
     </div>
-    <div class="frame alert">
-        <p class="text alert"> The quick brown fox jumps over the lazy dog </p>
+    <div class="frame error">
+        <p class="text error"> The quick brown fox jumps over the lazy dog </p>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales. Vestibulum
             ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu, sit
             amet
@@ -277,78 +329,847 @@ else:
     <h2 class="sub header"> Grid System </h2>
     <h3> Columns </h3>
     <div class="row">
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 1 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 2 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 3 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 4 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 5 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 6 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 7 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 8 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 9 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 10 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 11 </p></div>
-        <div class="cols-1" style="background-color: grey; border: 1px solid white"><p> COLS 12 </p></div>
+        <div class="cols-12 docs-grid"><p> COLS 1 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-11 docs-grid"><p> COLS 2 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-10 docs-grid"><p> COLS 3 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-9 docs-grid"><p> COLS 4 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-8 docs-grid"><p> COLS 5 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 5 </p></div>
+        <div class="cols-7 docs-grid"><p> COLS 6 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 5 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 6 </p></div>
+        <div class="cols-6 docs-grid"><p> COLS 7 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 5 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 6 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 7 </p></div>
+        <div class="cols-5 docs-grid"><p> COLS 8 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 5 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 6 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 7 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 8 </p></div>
+        <div class="cols-4 docs-grid"><p> COLS 9 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 5 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 6 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 7 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 8 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 9 </p></div>
+        <div class="cols-3 docs-grid"><p> COLS 10 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 5 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 6 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 7 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 8 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 9 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 10 </p></div>
+        <div class="cols-2 docs-grid"><p> COLS 11 </p></div>
+    </div>
+
+    <div class="row">
+        <div class="cols-1 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 5 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 6 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 7 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 8 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 9 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 10 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 11 </p></div>
+        <div class="cols-1 docs-grid"><p> COLS 12 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-2 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-2 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-2 docs-grid"><p> COLS 3 </p></div>
+        <div class="cols-2 docs-grid"><p> COLS 4 </p></div>
+        <div class="cols-2 docs-grid"><p> COLS 5 </p></div>
+        <div class="cols-2 docs-grid"><p> COLS 6 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-4 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-4 docs-grid"><p> COLS 2 </p></div>
+        <div class="cols-4 docs-grid"><p> COLS 3 </p></div>
+    </div>
+    <div class="row">
+        <div class="cols-6 docs-grid"><p> COLS 1 </p></div>
+        <div class="cols-6 docs-grid"><p> COLS 2 </p></div>
+    </div>
+    <div class="row centered">
+        <div class="cols-3 docs-grid"><p> COLS 1 </p></div>
+    </div>
+    <div class="row centered">
+        <div class="cols-6">
+            <div class="row">
+                <div class="cols-6 docs-grid"><p> COLS 1 </p></div>
+                <div class="cols-6 docs-grid"><p> COLS 2 </p></div>
+            </div>
+        </div>
+    </div>
+    <div class="row right">
+        <div class="cols-5 docs-grid"><p> COLS 1 RIGHT </p></div>
     </div>
     <h3> Column for large screen only </h3>
     <div class="row">
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 1 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 2 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 3 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 4 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 5 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 6 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 7 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 8 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 9 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 10 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 11 </p></div>
-        <div class="large-1" style="background-color: grey; border: 1px solid white"><p> LARGE 12 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 1 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 2 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 3 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 4 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 5 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 6 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 7 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 8 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 9 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 10 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 11 </p></div>
+        <div class="large-1 docs-grid"><p> LARGE 12 </p></div>
     </div>
-    <h3> Column for medium screen size </h3>
+    <h3> Column for medium screen only </h3>
     <div class="row">
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 1 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 2 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 3 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 4 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 5 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 6 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 7 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 8 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 9 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 10 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 11 </p></div>
-        <div class="medium-1" style="background-color: grey; border: 1px solid white"><p> MED 12 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 1 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 2 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 3 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 4 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 5 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 6 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 7 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 8 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 9 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 10 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 11 </p></div>
+        <div class="medium-1 docs-grid"><p> MED 12 </p></div>
     </div>
-    <h3> Column for small screen size </h3>
+    <h3> Column for small screen only</h3>
     <div class="row">
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 1 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 2 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 3 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 4 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 5 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 6 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 7 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 8 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 9 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 10 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 11 </p></div>
-        <div class="small-1" style="background-color: grey; border: 1px solid white"><p> SMALL 12 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 1 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 2 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 3 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 4 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 5 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 6 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 7 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 8 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 9 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 10 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 11 </p></div>
+        <div class="small-1 docs-grid"><p> SMALL 12 </p></div>
     </div>
+    <h2> Multiple sizes </h2>
     <div class="row">
         <div class="small-12 medium-4 large-4">
-            <p class="text info"> SMALL 12, MEDIUM 4 and LARGE 4 </p>
-            <p class="text primary"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text info">
+                <span class="show small"> SMALL 12 </span>
+                <span class="show medium"> MEDIUM 4 </span>
+                <span class="show large">LARGE 4 </span>
+            </p>
+            <div class="docs-grid">
+                <p> The quick brown fox jumps over the lazy dog </p>
+            </div>
         </div>
         <div class="small-12 medium-5 large-4">
-            <p class="text info"> SMALL 12, MEDIUM 5 and LARGE 4 </p>
-            <p class="text primary"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text info">
+                <span class="show small"> SMALL 12 </span>
+                <span class="show medium"> MEDIUM 5 </span>
+                <span class="show large">LARGE 4 </span>
+            </p>
+            <div class="docs-grid">
+                <p> The quick brown fox jumps over the lazy dog </p>
+            </div>
         </div>
         <div class="small-12 medium-3 large-4">
-            <p class="text info"> SMALL 12, MEDIUM 3 and LARGE 4 </p>
-            <p class="text primary"> The quick brown fox jumps over the lazy dog </p>
+            <p class="text info">
+                <span class="show small"> SMALL 12 </span>
+                <span class="show medium"> MEDIUM 3 </span>
+                <span class="show large">LARGE 4 </span>
+            </p>
+            <div class="docs-grid">
+                <p> The quick brown fox jumps over the lazy dog </p>
+            </div>
         </div>
     </div>
+    <div class="row">
+        <div class="small-6 medium-3 large-3">
+            <p class="text info">
+                <span class="show small"> SMALL 8 </span>
+                <span class="show medium"> MEDIUM 2 </span>
+                <span class="show large">LARGE 2 </span>
+            </p>
+            <div class="docs-grid">
+                <p> The quick brown fox jumps over the lazy dog </p>
+            </div>
+        </div>
+        <div class="small-3 medium-3 large-6">
+            <p class="text info">
+                <span class="show small"> SMALL 2 </span>
+                <span class="show medium"> MEDIUM 2 </span>
+                <span class="show large">LARGE 8 </span>
+            </p>
+            <div class="docs-grid">
+                <p> The quick brown fox jumps over the lazy dog </p>
+            </div>
+        </div>
+        <div class="small-3 medium-6 large-3">
+            <p class="text info">
+                <span class="show small"> SMALL 2 </span>
+                <span class="show medium"> MEDIUM 6 </span>
+                <span class="show large">LARGE 2 </span>
+            </p>
+            <div class="docs-grid">
+                <p> The quick brown fox jumps over the lazy dog </p>
+            </div>
+        </div>
+    </div>
+
+    <h2> Dynamic Grid <small class="sub"> (js) </small> </h2>
+    <div class="row dynamic">
+        <div class="cols docs-grid"> <p> aqui 1 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 2 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 3 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 4 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 5 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 6 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 7 </p> </div>
+    </div>
+     <div class="row dynamic">
+        <div class="cols docs-grid"> <p> aqui 1 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 2 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 3 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 4 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 5 </p> </div>
+    </div>
+     <div class="row dynamic">
+        <div class="cols docs-grid"> <p> aqui 1 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 2 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 3 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 4 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 5 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 6 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 7 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 8 </p> </div>
+        <div class="cols docs-grid"> <p> aqui 9 </p> </div>
+    </div>
+
+    <h2 class="sub header"> Responsive classes </h2>
+    <p class="show large" title=".show.large"> Show only for large </p>
+    <p class="show medium" title=".show.medium"> Show only for medium </p>
+    <p class="show small" title=".show.small"> Show only for small </p>
+    <p class="hide large" title=".hide.large"> Hide only for large </p>
+    <p class="hide medium" title=".hide.medium"> Hide only for medium </p>
+    <p class="hide small" title=".hide.small"> Hide only for small </p>
+
+    <h2 class="sub header"> forms </h2>
+    <h3> Checkbox </h3>
+    <div class="row">
+        <div class="cols-2">
+            <section title=".slider">
+                <div class="slider">
+                    <input type="checkbox" value="None" id="slider" name="check" checked/>
+                    <label for="slider"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slide.secondary">
+                <div class="slider secondary">
+                    <input type="checkbox" value="None" id="slider-secondary" name="check" checked/>
+                    <label for="slider-secondary"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slide.success">
+                <div class="slider success">
+                    <input type="checkbox" value="None" id="slider-success" name="check" checked/>
+                    <label for="slider-success"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slide.error">
+                <div class="slider error">
+                    <input type="checkbox" value="None" id="slider-error" name="check" checked/>
+                    <label for="slider-error"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slide.warning">
+                <div class="slider warning">
+                    <input type="checkbox" value="None" id="slider-warning" name="check" checked/>
+                    <label for="slider-warning"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slide.info">
+                <div class="slider info">
+                    <input type="checkbox" value="None" id="slider-info" name="check" checked/>
+                    <label for="slider-info"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-2">
+            <section title=".slider-button">
+                <div class="slider-button">
+                    <input type="checkbox" value="None" id="slider-button" name="check" checked/>
+                    <label for="slider-button"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slider-button.secondary">
+                <div class="slider-button secondary">
+                    <input type="checkbox" value="None" id="slider-button-secondary" name="check" checked/>
+                    <label for="slider-button-secondary"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slider-button.success">
+                <div class="slider-button success">
+                    <input type="checkbox" value="None" id="slider-button-success" name="check" checked/>
+                    <label for="slider-button-success"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slider-button.error">
+                <div class="slider-button error">
+                    <input type="checkbox" value="None" id="slider-button-error" name="check" checked/>
+                    <label for="slider-button-error"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slider-button.warning">
+                <div class="slider-button warning">
+                    <input type="checkbox" value="None" id="slider-button-warning" name="check" checked/>
+                    <label for="slider-button-warning"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slider-button.info">
+                <div class="slider-button secondary">
+                    <input type="checkbox" value="None" id="slider-button-info" name="check" checked/>
+                    <label for="slider-button-info"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-2">
+            <section title=".rounded">
+                <div class="rounded">
+                    <input type="checkbox" value="None" id="rounded" name="check" checked/>
+                    <label for="rounded"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".rounded.secondary">
+                <div class="rounded secondary">
+                    <input type="checkbox" value="None" id="rounded-secondary" name="check" checked/>
+                    <label for="rounded-secondary"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".rounded.success">
+                <div class="rounded success">
+                    <input type="checkbox" value="None" id="rounded-success" name="check" checked/>
+                    <label for="rounded-success"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".rounded.error">
+                <div class="rounded error">
+                    <input type="checkbox" value="None" id="rounded-error" name="check" checked/>
+                    <label for="rounded-error"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".rounded.warning">
+                <div class="rounded warning">
+                    <input type="checkbox" value="None" id="rounded-warning" name="check" checked/>
+                    <label for="rounded-warning"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".rounded.info">
+                <div class="rounded info">
+                    <input type="checkbox" value="None" id="rounded-info" name="check" checked/>
+                    <label for="rounded-info"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-2">
+            <section title=".squared">
+                <div class="squared">
+                    <input type="checkbox" value="None" id="squared" name="check" checked/>
+                    <label for="squared"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared.secondary">
+                <div class="squared secondary">
+                    <input type="checkbox" value="None" id="squared-secondary" name="check" checked/>
+                    <label for="squared-secondary"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared.success">
+                <div class="squared success">
+                    <input type="checkbox" value="None" id="squared-success" name="check" checked/>
+                    <label for="squared-success"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared.error">
+                <div class="squared error">
+                    <input type="checkbox" value="None" id="squared-error" name="check" checked/>
+                    <label for="squared-error"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared.warning">
+                <div class="squared warning">
+                    <input type="checkbox" value="None" id="squared-warning" name="check" checked/>
+                    <label for="squared-warning"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared.info">
+                <div class="squared info">
+                    <input type="checkbox" value="None" id="squared-info" name="check" checked/>
+                    <label for="squared-info"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-2">
+            <section title=".simple-slider">
+                <div class="simple-slider">
+                    <input type="checkbox" value="None" id="simple-slider" name="check" checked/>
+                    <label for="simple-slider"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slider-large">
+                <div class="slider-large">
+                    <input type="checkbox" value="None" id="slider-large" name="check" checked/>
+                    <label for="slider-large"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".rounded-bordered">
+                <div class="rounded-bordered">
+                    <input type="checkbox" value="None" id="rounded-bordered" name="check" checked/>
+                    <label for="rounded-bordered"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-bordered">
+                <div class="squared-bordered">
+                    <input type="checkbox" value="None" id="squared-bordered" name="check" checked/>
+                    <label for="squared-bordered"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-dark">
+                <div class="squared-dark">
+                    <input type="checkbox" value="None" id="squared-dark" name="check" checked/>
+                    <label for="squared-dark"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-light">
+                <div class="squared-light">
+                    <input type="checkbox" value="None" id="squared-light" name="check" checked/>
+                    <label for="squared-light"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <h3> Radio </h3>
+
+    <div class="row">
+        <div class="cols-3">
+            <section title=".slider">
+                <div class="slider">
+                    <input type="radio" value="None" id="simple-slider-primary-2" name="check-slider">
+                    <label for="simple-slider-primary-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".slider">
+                <div class="slider-button">
+                    <input type="radio" value="None" id="slider-button-primary-3" name="check-slider-button"/>
+                    <label for="slider-button-primary-3"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".rounded">
+                <div class="rounded">
+                    <input type="radio" value="None" id="rounded-primary-4" name="check-rounded"/>
+                    <label for="rounded-primary-4"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".squared">
+                <div class="squared">
+                    <input type="radio" value="None" id="squared-primary-5" name="check-squared">
+                    <label for="squared-primary-5"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+        <div class="row">
+        <div class="cols-3">
+            <section title=".slider.secondary">
+                <div class="slider secondary">
+                    <input type="radio" value="None" id="simple-slider-secondary-2" name="check-slider">
+                    <label for="simple-slider-secondary-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".slider.secondary">
+                <div class="slider-button secondary">
+                    <input type="radio" value="None" id="slider-button-secondary-3" name="check-slider-button"/>
+                    <label for="slider-button-secondary-3"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".rounded.secondary">
+                <div class="rounded secondary">
+                    <input type="radio" value="None" id="rounded-secondary-4" name="check-rounded"/>
+                    <label for="rounded-secondary-4"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".squared.secondary">
+                <div class="squared secondary">
+                    <input type="radio" value="None" id="squared-secondary-5" name="check-squared">
+                    <label for="squared-secondary-5"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-3">
+            <section title=".slider.success">
+                <div class="slider success">
+                    <input type="radio" value="None" id="simple-slider-success-2" name="check-slider">
+                    <label for="simple-slider-success-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".slider.success">
+                <div class="slider-button success">
+                    <input type="radio" value="None" id="slider-button-success-3" name="check-slider-button"/>
+                    <label for="slider-button-success-3"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".rounded.success">
+                <div class="rounded success">
+                    <input type="radio" value="None" id="rounded-success-4" name="check-rounded"/>
+                    <label for="rounded-success-4"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".squared.success">
+                <div class="squared success">
+                    <input type="radio" value="None" id="squared-success-5" name="check-squared">
+                    <label for="squared-success-5"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-3">
+            <section title=".slider.error">
+                <div class="slider error">
+                    <input type="radio" value="None" id="simple-slider-error-2" name="check-slider">
+                    <label for="simple-slider-error-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".slider.">
+                <div class="slider-button error">
+                    <input type="radio" value="None" id="slider-button-error-3" name="check-slider-button"/>
+                    <label for="slider-button-error-3"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".rounded.error">
+                <div class="rounded error">
+                    <input type="radio" value="None" id="rounded-error-4" name="check-rounded"/>
+                    <label for="rounded-error-4"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".squared.error">
+                <div class="squared secondary">
+                    <input type="radio" value="None" id="squared-error-5" name="check-squared">
+                    <label for="squared-error-5"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-3">
+            <section title=".slider.warning">
+                <div class="slider warning">
+                    <input type="radio" value="None" id="simple-slider-warning-2" name="check-slider">
+                    <label for="simple-slider-warning-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".slider.warning">
+                <div class="slider-button warning">
+                    <input type="radio" value="None" id="slider-button-warning-3" name="check-slider-button"/>
+                    <label for="slider-button-warning-3"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".rounded.warning">
+                <div class="rounded warning">
+                    <input type="radio" value="None" id="rounded-warning-4" name="check-rounded"/>
+                    <label for="rounded-warning-4"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".squared.warning">
+                <div class="squared warning">
+                    <input type="radio" value="None" id="squared-warning-5" name="check-squared">
+                    <label for="squared-warning-5"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-3">
+            <section title=".slider.info">
+                <div class="slider info">
+                    <input type="radio" value="None" id="simple-slider-info-2" name="check-slider">
+                    <label for="simple-slider-info-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".slider.info">
+                <div class="slider-button info">
+                    <input type="radio" value="None" id="slider-button-info-3" name="check-slider-button"/>
+                    <label for="slider-button-info-3"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".rounded.info">
+                <div class="rounded info">
+                    <input type="radio" value="None" id="rounded-info-4" name="check-rounded"/>
+                    <label for="rounded-info-4"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-3">
+            <section title=".squared.info">
+                <div class="squared info">
+                    <input type="radio" value="None" id="squared-info-5" name="check-squared">
+                    <label for="squared-info-5"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cols-2">
+            <section title=".simple-slider">
+                <div class="simple-slider">
+                    <input type="radio" value="None" id="simple-slider-1" name="check-simple-slider" checked/>
+                    <label for="simple-slider-1"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slider-large">
+                <div class="slider-large">
+                    <input type="radio" value="None" id="slider-large-1" name="check-slider-large" checked/>
+                    <label for="slider-large-1"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".rounded-bordered">
+                <div class="rounded-bordered">
+                    <input type="radio" value="None" id="rounded-bordered-1" name="check-rounded-bordered" checked/>
+                    <label for="rounded-bordered-1"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-bordered">
+                <div class="squared-bordered">
+                    <input type="radio" value="None" id="squared-bordered-1" name="check-squared-bordered" checked/>
+                    <label for="squared-bordered-1"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-dark">
+                <div class="squared-dark">
+                    <input type="radio" value="None" id="squared-dark-1" name="check-squared-dark" checked/>
+                    <label for="squared-dark-1"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-light">
+                <div class="squared-light">
+                    <input type="radio" value="None" id="squared-light-1" name="check-squared-light" checked/>
+                    <label for="squared-light-1"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cols-2">
+            <section title=".simple-slider">
+                <div class="simple-slider">
+                    <input type="radio" value="None" id="simple-slider-2" name="check-simple-slider">
+                    <label for="simple-slider-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".slider-large">
+                <div class="slider-large">
+                    <input type="radio" value="None" id="slider-large-2" name="check-slider-large">
+                    <label for="slider-large-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".rounded-bordered">
+                <div class="rounded-bordered">
+                    <input type="radio" value="None" id="rounded-bordered-2" name="check-rounded-bordered">
+                    <label for="rounded-bordered-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-bordered">
+                <div class="squared-bordered">
+                    <input type="radio" value="None" id="squared-bordered-2" name="check-squared-bordered">
+                    <label for="squared-bordered-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-dark">
+                <div class="squared-dark">
+                    <input type="radio" value="None" id="squared-dark-2" name="check-squared-dark">
+                    <label for="squared-dark-2"></label>
+                </div>
+            </section>
+        </div>
+        <div class="cols-2">
+            <section title=".squared-light">
+                <div class="squared-light">
+                    <input type="radio" value="None" id="squared-light-2" name="check-squared-light">
+                    <label for="squared-light-2"></label>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- end -->
 </div>
 </body>
 </html>
