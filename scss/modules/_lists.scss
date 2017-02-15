@@ -1,0 +1,57 @@
+@import "default";
+
+$list-border-radius: 5px;
+$list-background-color: $gray-wall;
+$list-item-shadow: #444;
+
+div {
+
+  &.lists {
+    margin: 0;
+    border: 1px solid darken($light-gray, 10%);
+    padding: 1rem 1rem 1.5rem 1rem;
+    background-color: $list-background-color;
+    border-radius: $list-border-radius;
+    list-style: none;
+
+    header {
+      font-size: x-large;
+      color: $black;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid darken($list-background-color, 10%);
+    }
+
+    div.bar {
+      border-radius: $list-border-radius;
+      margin: 1rem 0;
+      padding: 1rem;
+      transition: background-color 0.15s ease-in;
+
+      .add{
+        cursor: cell;
+      }
+
+      &:hover {
+        background-color: darken($list-background-color, 10%);
+        transition: background-color 0.15s ease-out;
+
+      }
+    }
+
+    div.item {
+      cursor: move;
+      font-size: small;
+      background-color: $white;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: $list-border-radius;
+      box-shadow: 0 0 0.2rem 0 $list-item-shadow;
+      border: 1px solid transparent;
+
+      &.over {
+        border: 1px solid $primary-color;
+        box-shadow: 0 0 .4rem 0 $primary-color;
+      }
+    }
+  }
+}

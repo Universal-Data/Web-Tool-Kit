@@ -1,14 +1,72 @@
 @import "default";
 
-.icon {
-  display: block;
-  text-indent: -9999px;
-  width: 100px;
-  height: 82px;
-  background-size: 100px 82px;
 
-  .play {
-    background: url('../../icons/play.svg');
+@mixin base-icon($width, $height) {
+  width: $width;
+  height: $height;
+
+  margin: 0;
+  background-image: url($icons-img);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  a {
+    margin: 0;
+    color: $black;
+    text-decoration: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: $height;
+    transition: opacity 0.30s ease-in, background-color 0.20s ease-in;
+    //transition: background-color 0.25s ease-in;
+  }
+
+  &:hover a {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: opacity 0.25s ease-out, background-color 0.15s ease-out;
+    //transition: background-color 0.20s ease-out;
+  }
+
+}
+
+.icons {
+  &.mini {
+    @include base-icon($icons-mini-width, $icons-mini-height);
+
+    @each $class, $order in $icons-name {
+      &.#{$class} {
+        background-position: -1*$order*$icons-mini-width 0px;
+        font-size: 70%;
+      }
+    }
+  }
+
+  &.medium {
+    @include base-icon($icons-medium-width, $icons-medium-height);
+
+    @each $class, $order in $icons-name {
+      &.#{$class} {
+        background-position: -1*$order*$icons-medium-width 0px;
+        font-size: 85%;
+      }
+    }
+  }
+
+  &.large {
+    @include base-icon($icons-large-width, $icons-large-height);
+
+    @each $class, $order in $icons-name {
+      &.#{$class} {
+        background-position: -1*$order*$icons-large-width 0px;
+        font-size: 100%;
+      }
+    }
   }
 
 }

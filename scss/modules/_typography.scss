@@ -36,12 +36,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote, button, cite, datalist, dt, dd, dl, del, ins, details,
-dfn, dialog, em, fieldset, figcaption, footer, i, input, ins, kbd, label, legend, li, link, main, mark, menu, menuitem
+dfn, dialog, em, fieldset, figcaption, footer, header, i, input, ins, kbd, label, legend, li, link, main, mark, menu, menuitem
 meter, nav, ol, output, option, optgroup, p, q, rp, rt, ruby, s, samp, section, span, strike, strong, sub, summary, sup,
 table, tbody, td, textarea, tfoot, th, thead, time, title, tr, u, ul, var, video
 {
   font-family: $font-family;
-  font-size: 0.875em;
+  font-size: $typography-font-size;
 }
 
 .text {

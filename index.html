@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="min/app.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/modernizr.min.js"></script>
     <style>
         .docs-grid {
             border-radius: 6px;
@@ -22,6 +24,8 @@
     </style>
     <script src="js/universaldata.core.js"></script>
     <script src="js/universaldata.grid.js"></script>
+    <script src="js/universaldata.icon.js"></script>
+    <script src="js/universaldata.lists.js"></script>
     <script>
         UniversalData.init();
     </script>
@@ -65,30 +69,38 @@
     <div class="row">
         <div class="cols-6">
             <h3> Sizes buttons</h3>
-            <a class="button micro" href="#"> Button Micro </a>
-            <a class="button small" href="#"> Button Small </a>
-            <a class="button large" href="#"> Button Large </a>
-            <br>
-            <a class="button micro secondary" href="#"> Button Micro </a>
-            <a class="button small secondary" href="#"> Button Small </a>
-            <a class="button large secondary" href="#"> Button Large </a>
-            <br>
-            <a class="button micro success" href="#"> Button Micro </a>
-            <a class="button small success" href="#"> Button Small </a>
-            <a class="button large success" href="#"> Button Large </a>
-            <br>
-            <a class="button micro error" href="#"> Button Micro </a>
-            <a class="button small error" href="#"> Button Small </a>
-            <a class="button large error" href="#"> Button Large </a>
-            <br>
-            <a class="button micro warning" href="#"> Button Micro </a>
-            <a class="button small warning" href="#"> Button Small </a>
-            <a class="button large warning" href="#"> Button Large </a>
-            <br>
-            <a class="button micro info" href="#"> Button Micro </a>
-            <a class="button small info" href="#"> Button Small </a>
-            <a class="button large info" href="#"> Button Large </a>
-
+            <div class="row">
+                <div class="cols-12">
+                    <a class="button micro" href="#"> Button Micro </a>
+                    <a class="button small" href="#"> Button Small </a>
+                    <a class="button large" href="#"> Button Large </a>
+                </div>
+                <div class="cols-12">
+                    <a class="button micro secondary" href="#"> Button Micro </a>
+                    <a class="button small secondary" href="#"> Button Small </a>
+                    <a class="button large secondary" href="#"> Button Large </a>
+                </div>
+                <div class="cols-12">
+                    <a class="button micro success" href="#"> Button Micro </a>
+                    <a class="button small success" href="#"> Button Small </a>
+                    <a class="button large success" href="#"> Button Large </a>
+                </div>
+                <div class="cols-12">
+                    <a class="button micro error" href="#"> Button Micro </a>
+                    <a class="button small error" href="#"> Button Small </a>
+                    <a class="button large error" href="#"> Button Large </a>
+                </div>
+                <div class="cols-12">
+                    <a class="button micro warning" href="#"> Button Micro </a>
+                    <a class="button small warning" href="#"> Button Small </a>
+                    <a class="button large warning" href="#"> Button Large </a>
+                </div>
+                <div class="cols-12">
+                    <a class="button micro info" href="#"> Button Micro </a>
+                    <a class="button small info" href="#"> Button Small </a>
+                    <a class="button large info" href="#"> Button Large </a>
+                </div>
+            </div>
         </div>
         <div class="cols-3">
             <h3> Icon buttons </h3>
@@ -177,13 +189,17 @@
             <h4> Center </h4>
             <p class="text centered"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at
                 sapien ut
-                sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis
+                sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                Duis
                 faucibus
-                nisl arcu, sit amet blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec
+                nisl arcu, sit amet blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas
+                nec
                 leo.
-                Vivamus finibus luctus volutpat. Proin faucibus euismod leo, at porttitor turpis vestibulum et. Donec
+                Vivamus finibus luctus volutpat. Proin faucibus euismod leo, at porttitor turpis vestibulum et.
+                Donec
                 dui dolor,
-                varius et urna eleifend, luctus tempus ex. Aliquam vitae dolor at turpis pellentesque consequat eu non
+                varius et urna eleifend, luctus tempus ex. Aliquam vitae dolor at turpis pellentesque consequat eu
+                non
                 nisl.
                 Donec eu placerat lacus, id posuere ante. </p>
         </div>
@@ -191,26 +207,34 @@
             <h4> Justify </h4>
             <p class="text justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at
                 sapien ut
-                sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis
+                sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                Duis
                 faucibus
-                nisl arcu, sit amet blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec
+                nisl arcu, sit amet blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas
+                nec
                 leo.
-                Vivamus finibus luctus volutpat. Proin faucibus euismod leo, at porttitor turpis vestibulum et. Donec
+                Vivamus finibus luctus volutpat. Proin faucibus euismod leo, at porttitor turpis vestibulum et.
+                Donec
                 dui dolor,
-                varius et urna eleifend, luctus tempus ex. Aliquam vitae dolor at turpis pellentesque consequat eu non
+                varius et urna eleifend, luctus tempus ex. Aliquam vitae dolor at turpis pellentesque consequat eu
+                non
                 nisl.
                 Donec eu placerat lacus, id posuere ante. </p>
         </div>
         <div class="small-12 medium-4 large-4">
             <h4> Right </h4>
-            <p class="text right"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien
-                ut sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis
+            <p class="text right"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at
+                sapien
+                ut sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                Duis
                 faucibus nisl arcu, sit amet blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a,
                 egestas nec
                 leo.
-                Vivamus finibus luctus volutpat. Proin faucibus euismod leo, at porttitor turpis vestibulum et. Donec
+                Vivamus finibus luctus volutpat. Proin faucibus euismod leo, at porttitor turpis vestibulum et.
+                Donec
                 dui dolor,
-                varius et urna eleifend, luctus tempus ex. Aliquam vitae dolor at turpis pellentesque consequat eu non
+                varius et urna eleifend, luctus tempus ex. Aliquam vitae dolor at turpis pellentesque consequat eu
+                non
                 nisl.
                 Donec eu placerat lacus, id posuere ante. </p>
         </div>
@@ -218,8 +242,10 @@
 
     <h2 class="sub header"> Frames </h2>
     <div class="frame">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu, sit
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales.
+            Vestibulum
+            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu,
+            sit
             amet
             blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec leo. Vivamus finibus
             luctus
@@ -231,8 +257,10 @@
     </div>
     <div class="frame primary">
         <p class="text primary"> The quick brown fox jumps over the lazy dog </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu, sit
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales.
+            Vestibulum
+            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu,
+            sit
             amet
             blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec leo. Vivamus finibus
             luctus
@@ -244,8 +272,10 @@
     </div>
     <div class="frame secondary">
         <p class="text secondary"> The quick brown fox jumps over the lazy dog </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu, sit
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales.
+            Vestibulum
+            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu,
+            sit
             amet
             blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec leo. Vivamus finibus
             luctus
@@ -256,8 +286,10 @@
     </div>
     <div class="frame success">
         <p class="text success"> The quick brown fox jumps over the lazy dog </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu, sit
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales.
+            Vestibulum
+            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu,
+            sit
             amet
             blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec leo. Vivamus finibus
             luctus
@@ -269,8 +301,10 @@
     </div>
     <div class="frame error">
         <p class="text error"> The quick brown fox jumps over the lazy dog </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu, sit
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales.
+            Vestibulum
+            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu,
+            sit
             amet
             blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec leo. Vivamus finibus
             luctus
@@ -282,8 +316,10 @@
     </div>
     <div class="frame warning">
         <p class="text warning"> The quick brown fox jumps over the lazy dog </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu, sit
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales.
+            Vestibulum
+            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu,
+            sit
             amet
             blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec leo. Vivamus finibus
             luctus
@@ -295,8 +331,10 @@
     </div>
     <div class="frame info">
         <p class="text info"> The quick brown fox jumps over the lazy dog </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu, sit
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien ut sodales.
+            Vestibulum
+            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus nisl arcu,
+            sit
             amet
             blandit lectus cursus id. Integer odio felis, tincidunt nec pharetra a, egestas nec leo. Vivamus finibus
             luctus
@@ -573,33 +611,35 @@ else:
         </div>
     </div>
 
-    <h2> Dynamic Grid <small class="sub"> (js) </small> </h2>
+    <h2> Dynamic Grid
+        <small class="sub"> (js)</small>
+    </h2>
     <div class="row dynamic">
-        <div class="cols docs-grid"> <p> aqui 1 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 2 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 3 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 4 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 5 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 6 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 7 </p> </div>
+        <div class="cols docs-grid"><p> aqui 1 </p></div>
+        <div class="cols docs-grid"><p> aqui 2 </p></div>
+        <div class="cols docs-grid"><p> aqui 3 </p></div>
+        <div class="cols docs-grid"><p> aqui 4 </p></div>
+        <div class="cols docs-grid"><p> aqui 5 </p></div>
+        <div class="cols docs-grid"><p> aqui 6 </p></div>
+        <div class="cols docs-grid"><p> aqui 7 </p></div>
     </div>
-     <div class="row dynamic">
-        <div class="cols docs-grid"> <p> aqui 1 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 2 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 3 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 4 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 5 </p> </div>
+    <div class="row dynamic">
+        <div class="cols docs-grid"><p> aqui 1 </p></div>
+        <div class="cols docs-grid"><p> aqui 2 </p></div>
+        <div class="cols docs-grid"><p> aqui 3 </p></div>
+        <div class="cols docs-grid"><p> aqui 4 </p></div>
+        <div class="cols docs-grid"><p> aqui 5 </p></div>
     </div>
-     <div class="row dynamic">
-        <div class="cols docs-grid"> <p> aqui 1 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 2 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 3 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 4 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 5 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 6 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 7 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 8 </p> </div>
-        <div class="cols docs-grid"> <p> aqui 9 </p> </div>
+    <div class="row dynamic">
+        <div class="cols docs-grid"><p> aqui 1 </p></div>
+        <div class="cols docs-grid"><p> aqui 2 </p></div>
+        <div class="cols docs-grid"><p> aqui 3 </p></div>
+        <div class="cols docs-grid"><p> aqui 4 </p></div>
+        <div class="cols docs-grid"><p> aqui 5 </p></div>
+        <div class="cols docs-grid"><p> aqui 6 </p></div>
+        <div class="cols docs-grid"><p> aqui 7 </p></div>
+        <div class="cols docs-grid"><p> aqui 8 </p></div>
+        <div class="cols docs-grid"><p> aqui 9 </p></div>
     </div>
 
     <h2 class="sub header"> Responsive classes </h2>
@@ -898,7 +938,7 @@ else:
             </section>
         </div>
     </div>
-        <div class="row">
+    <div class="row">
         <div class="cols-3">
             <section title=".slider.secondary">
                 <div class="slider secondary">
@@ -1167,6 +1207,135 @@ else:
                     <label for="squared-light-2"></label>
                 </div>
             </section>
+        </div>
+    </div>
+
+    <nav class="navbar fixed">
+        <ul class="menu">
+            <li class="logo">
+                <a class="link" href=""> Logo </a>
+            </li>
+            <li>
+                <a class="link" href=""> Minha conta </a>
+            </li>
+            <li>
+                <a class="link" href=""> Minhas listas </a>
+            </li>
+            <li>
+                <a class="link" href=""> Configurações </a>
+            </li>
+            <li>
+                <a class="link" href=""> Sair </a>
+            </li>
+        </ul>
+    </nav>
+    <h2 class="sub header"> Icons </h2>
+    <div class="row">
+        <div class="cols-4">
+            <h3> Large (92x92)px </h3>
+            <div class="icons large exit">
+                <a href="#exit"> exit </a>
+            </div>
+
+            <div class="icons large settings">
+                <a href="#settings"> settings </a>
+            </div>
+
+            <div class="icons large list">
+                <a href="#list"> list </a>
+            </div>
+        </div>
+
+        <div class="cols-4">
+            <h3> Large (60x60)px </h3>
+            <div class="icons medium exit">
+                <a href="#exit"> exit </a>
+            </div>
+            <div class="icons medium settings">
+                <a href="#settings"> settings </a>
+            </div>
+
+            <div class="icons medium list">
+                <a href="#list"> list </a>
+            </div>
+        </div>
+
+        <div class="cols-4">
+            <h3> Mini (30x30)px </h3>
+            <div class="icons mini exit">
+                <a href="#exit"> exit </a>
+            </div>
+
+            <div class="icons mini settings">
+                <a href="#settings"> settings </a>
+            </div>
+
+            <div class="icons mini list">
+                <a href="#list"> list </a>
+            </div>
+        </div>
+    </div>
+    <h2 class="sub header"> Lists </h2>
+    <div class="row centered">
+        <div class="medium-12 large-6">
+            <div class="lists">
+                <header class="text centered"> List name</header>
+
+                <div class="bar">
+                    <div class="row">
+                        <div class="cols-6">
+                            <a data-button="add" class="button expand"> Adicionar a lista </a>
+
+                        </div>
+                        <div class="cols-6">
+                            <a data-button="rmv" class="button error expand"> Remover da lista</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" draggable="true">
+                    <div class="row">
+                        <div class="medium-12 large-4">
+                            <img src="img/green.png" alt="green one">
+                        </div>
+                        <div class="medium-12 large-8">
+                            <p> 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien
+                                ut sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                cubilia Curae; Duis faucibus nisl arcu, sit amet blandit lectus cursus id. Integer odio
+                                felis, tincidunt nec pharetra a, egestas nec leo. </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item" draggable="true">
+                    <div class="row">
+                        <div class="medium-12 large-4">
+                            <img src="img/blue.png" alt="blue one">
+                        </div>
+                        <div class="medium-12 large-8">
+                            <p> 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien
+                                ut sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                cubilia Curae; Duis faucibus nisl arcu, sit amet blandit lectus cursus id. Integer odio
+                                felis, tincidunt nec pharetra a, egestas nec leo. </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item" draggable="true">
+                    <div class="row">
+                        <div class="medium-12 large-4">
+                            <img src="img/red.png" alt="red one">
+                        </div>
+                        <div class="medium-12 large-8">
+                            <p> 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis at sapien
+                                ut sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                cubilia Curae; Duis faucibus nisl arcu, sit amet blandit lectus cursus id. Integer odio
+                                felis, tincidunt nec pharetra a, egestas nec leo. </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- end -->

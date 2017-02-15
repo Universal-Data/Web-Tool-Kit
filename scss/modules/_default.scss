@@ -1,6 +1,7 @@
 // Default colors
 $white: #FFFFFF;
 $gray: #606060;
+$gray-wall: #d9d9d9;
 $lead: #333333;
 $black: #000000;
 $light-gray: #F1F1F1;
@@ -12,7 +13,6 @@ $error-color:     #CA3435;
 $success-color:   #1AB385;
 $warning-color:   #FFD12A;
 $info-color:      #FF681F;
-
 $background-color: $light-gray;
 
 // Grid System
@@ -28,19 +28,17 @@ $large-screen-min-width: 733px;
 $large-screen-max-width: 10000px;
 
 // Frames
-
 $frame-bg-color: $white;
 $frame-bg-fade: 25%;
 $frame-code-bg-color: $secondary-color;
 
 // Typography
-
 $font-family: 'Nunito', Helvetica, Arial, sans-serif;
 $font-family-monospace: 'Droid Sans Mono', monospace;
 $text-darken-percent: 15%;
+$typography-font-size: 16px;
 
 // Button
-
 $button-colors: (
         'secondary': $secondary-color,
         'error': $error-color,
@@ -67,3 +65,25 @@ $button-icon-margin: 0.3571rem 0.1429rem 1rem 0.1429rem;
 
 // Forms
 $bg-color-slider: $lead;
+
+// Navbar
+$navbar-bg-color: $white;
+$navbar-padding: 0.8rem 2rem;
+
+// Icons
+$icons-large-height: 90px;
+$icons-large-width: 90px;
+
+$icons-medium-height: 60px;
+$icons-medium-width: 60px;
+
+$icons-mini-height: 30px;
+$icons-mini-width: 30px;
+
+$icons-img: "../img/icons.png";
+
+$icons-name : (
+  'exit': 0,
+  'settings': 1,
+  'list': 2,
+);

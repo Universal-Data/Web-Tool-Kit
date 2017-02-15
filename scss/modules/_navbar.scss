@@ -1,0 +1,55 @@
+@import "default";
+@import "utils";
+
+@mixin base-navbar($bg-color:$navbar-bg-color) {
+  margin: 0;
+  display: block;
+  width: 100%;
+  background-color: $bg-color;
+  text-align: center;
+  z-index: 999;
+}
+
+nav.navbar {
+  @include base-navbar();
+
+  &.fixed {
+    top: 0;
+    left: 0;
+    position: fixed;
+    box-shadow: 0 0.1rem 0.4rem $gray;
+  }
+
+  a {
+    margin: 0;
+    transition: padding 0.15s ease-out;
+    padding: $navbar-padding;
+
+    display: inline-block;
+    font-size: 1rem;
+
+    &.link {
+      color: $gray;
+      text-decoration: none;
+    }
+
+    &:hover {
+      padding: 1.5rem 2rem 1.5rem 2rem;
+      transition: padding 0.25s ease-in;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0 3rem;
+    padding: 0;
+    overflow: hidden;
+    li {
+      float: left;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+}
