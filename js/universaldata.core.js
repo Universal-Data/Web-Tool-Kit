@@ -48,12 +48,16 @@ var UniversalData = {
 
     init: function () {
         var plugins = this._plugins;
-        $(document).ready( function () {
+        document.addEventListener('DOMContentLoaded', function () {
+            [].forEach.call(plugins, function (plugin) {
+                plugin.init();
+            });
+        }, false);
+        /*$(document).ready( function () {
             $.each(plugins, function (index, plugin) {
                 plugin.init();
             });
-        });
-
+        });*/
     }
 };
 

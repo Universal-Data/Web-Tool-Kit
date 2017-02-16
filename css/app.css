@@ -1121,5 +1121,8 @@ div.lists {
     div.lists div.item.over {
       border: 1px solid #0048BA;
       box-shadow: 0 0 0.4rem 0 #0048BA; }
+    div.lists div.item.selected {
+      border: 1px solid #CA3435;
+      box-shadow: 0 0 0.4rem 0 #CA3435; }
 
 /*# sourceMappingURL=app.css.map */

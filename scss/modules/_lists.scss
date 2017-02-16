@@ -52,6 +52,13 @@ div {
         border: 1px solid $primary-color;
         box-shadow: 0 0 .4rem 0 $primary-color;
       }
+
+      &.selected {
+                border: 1px solid $error-color;
+        box-shadow: 0 0 .4rem 0 $error-color;
+
+      }
+
     }
   }
 }

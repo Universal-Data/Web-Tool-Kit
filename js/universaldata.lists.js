@@ -42,7 +42,7 @@ Lists.prototype.init = function () {
         }
 
         if (dragSrcEl != this) {
-            // Set the source column's HTML to the HTML of the columnwe dropped on.
+            // Set the source column's HTML to the HTML of the column dropped on.
             dragSrcEl.innerHTML = this.innerHTML;
             this.innerHTML = e.dataTransfer.getData('text/html');
         }
@@ -61,19 +61,45 @@ Lists.prototype.init = function () {
         });
     }
 
+    function handleSelect(event) {
+        if (event.preventDefault) {
+            event.preventDefault();
+        }
+        if (this.classList.contains('selected')) {
+            this.classList.remove('selected');
+        } else {
+            this.classList.add('selected');
+        }
 
-    var cols = document.querySelectorAll('.lists .item');
-    [].forEach.call(cols, function (col) {
+    }
+
+    [].forEach.call(document.querySelectorAll('.lists .item'), function (col) {
         col.addEventListener('dragstart', handleDragStart, false);
         col.addEventListener('dragenter', handleDragEnter, false);
         col.addEventListener('dragover', handleDragOver, false);
         col.addEventListener('dragleave', handleDragLeave, false);
         col.addEventListener('drop', handleDrop, false);
         col.addEventListener('dragend', handleDragEnd, false);
+        col.addEventListener('click', handleSelect, false);
     });
 
-    var buttonRemove = document.querySelectorAll('[data-button="rmv"]');
-    var buttonAdd = document.querySelectorAll('[data-button="add"]');
+
+    function removeItems(event) {
+        if (event.stopPropagation) {
+            event.stopPropagation();
+        }
+        [].forEach.call(document.querySelectorAll('.selected'), function (element) {
+            element.remove();
+        })
+
+
+    }
+
+
+    [].forEach.call(document.querySelectorAll('[data-button="rmv"]'), function (element) {
+        element.addEventListener('click', removeItems, false);
+    });
+
 };
 
 (function (global) {

@@ -3,16 +3,14 @@
 function Grid(classAttr, classChild) {
     this.name = "grid";
     this.classAttr = (classAttr || ".row.dynamic");
-    this.classChild = (classChild || ".cols");
 }
 
 Grid.prototype.init = function () {
-    var $rows = $(this.classAttr);
-    $rows.each(function () {
-        var $target = $(this).children(this.classChild);
-        $target.css(
-            "width", (100 / $target.length).toString() + "%"
-        );
+    [].forEach.call(document.querySelectorAll(this.classAttr), function (element) {
+        var totalChild = element.children.length;
+        [].forEach.call(element.children, function (child) {
+            child.style.width = (100 / totalChild).toString() + "%";
+        });
     });
 };
 
