@@ -6,6 +6,7 @@ function Lists(classAttr) {
 }
 
 Lists.prototype.init = function () {
+    var lists = document.querySelectorAll('.lists .item');
     var dragSrcEl = null;
 
     function handleDragStart(e) {
@@ -56,8 +57,8 @@ Lists.prototype.init = function () {
         this.style.opacity = '1.0';
         // this/e.target is the source node.
 
-        [].forEach.call(cols, function (col) {
-            col.classList.remove('over');
+        [].forEach.call(lists, function (list) {
+            list.classList.remove('over');
         });
     }
 
@@ -65,6 +66,7 @@ Lists.prototype.init = function () {
         if (event.preventDefault) {
             event.preventDefault();
         }
+
         if (this.classList.contains('selected')) {
             this.classList.remove('selected');
         } else {
@@ -73,14 +75,14 @@ Lists.prototype.init = function () {
 
     }
 
-    [].forEach.call(document.querySelectorAll('.lists .item'), function (col) {
-        col.addEventListener('dragstart', handleDragStart, false);
-        col.addEventListener('dragenter', handleDragEnter, false);
-        col.addEventListener('dragover', handleDragOver, false);
-        col.addEventListener('dragleave', handleDragLeave, false);
-        col.addEventListener('drop', handleDrop, false);
-        col.addEventListener('dragend', handleDragEnd, false);
-        col.addEventListener('click', handleSelect, false);
+    [].forEach.call(lists, function (list) {
+        list.addEventListener('dragstart', handleDragStart, false);
+        list.addEventListener('dragenter', handleDragEnter, false);
+        list.addEventListener('dragover', handleDragOver, false);
+        list.addEventListener('dragleave', handleDragLeave, false);
+        list.addEventListener('drop', handleDrop, false);
+        list.addEventListener('dragend', handleDragEnd, false);
+        list.addEventListener('click', handleSelect, false);
     });
 
 
@@ -91,8 +93,6 @@ Lists.prototype.init = function () {
         [].forEach.call(document.querySelectorAll('.selected'), function (element) {
             element.remove();
         })
-
-
     }
 
 

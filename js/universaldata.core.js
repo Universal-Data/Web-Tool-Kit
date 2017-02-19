@@ -37,7 +37,6 @@
 var UniversalData = {
     // Version
     version: "0.1",
-
     _plugins: [],
 
     addPlugin: function (plugin, name) {
@@ -53,11 +52,6 @@ var UniversalData = {
                 plugin.init();
             });
         }, false);
-        /*$(document).ready( function () {
-            $.each(plugins, function (index, plugin) {
-                plugin.init();
-            });
-        });*/
     }
 };
 

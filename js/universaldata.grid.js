@@ -1,6 +1,6 @@
 'use strict';
 
-function Grid(classAttr, classChild) {
+function Grid(classAttr) {
     this.name = "grid";
     this.classAttr = (classAttr || ".row.dynamic");
 }
