@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: 'css/app.css',
-                        dest: 'min/app.min.css',
+                        dest: 'css/app.min.css',
                     },
                 ],
             },
